@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --white: hsl(360, 100%, 100%);
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+    --defEm: 2em;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-bottom: var(--defEm);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--violet);
+    background-image: url('images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+    max-width: min(90%, 1000px);
+    margin: auto;
+
+    @media(min-width:1000px) {
+        max-width: 90vw;
+        margin: auto;
+        background-image: url('images/bg-desktop.svg');
+    }
+}
+
+main {
+    @media(min-width:1000px) {
+        display: flex;
+        gap: 2em;
+    } 
+}
+
+main img {
+    width: min(600px, 100%);
+    margin-bottom: var(--defEm);
+}
+
+.test-section {
+    font-size: .8em;
+    margin-bottom: var(--defEm);
+
+    & * {
+        margin-bottom: 1.2rem;
+    }
+
+    & h3 {
+        text-transform: capitalize;
+        font-size: 1.7rem;
+        line-height: 1.5;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+
+    & a {
+        text-decoration: none;
+        color: var(--softMagenta);
+        background-color: var(--white);
+        padding: .6em 2em;
+        border-radius: 1.5em;
+        display: block;
+        width: 50%;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        transition: 1s ease-in-out;
+
+        &:hover {
+            background-color: var(--softMagenta);
+            color: var(--white);
+        }
+    }
+
+    @media(min-width:1000px) {
+        font-size: 1.3em;
+        & a {
+            width: 5em;
+            margin: 0;
+        }
+        & h3 {
+            font-weight: 600;
+            font-size: 2.3em;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+
+    & ion-icon {
+        text-decoration: none;
+        font-size: 2em;
+        color: var(--white);
+        transition: 1s ease-in-out;
+        &:hover {
+            color: var(--softMagenta);
+        }
+    }
+
+    @media(min-width:1000px) {
+        text-align: right;
+        & ion-icon {
+            font-size: 3em;
+        }
+    }
+}
