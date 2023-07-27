@@ -129,6 +129,10 @@ ion-icon:hover {
         font-size: 2.3em;
     }
 
+    main img, .test-section {
+        margin-bottom: 0;
+    }
+
     footer {
         text-align: right;
     }
