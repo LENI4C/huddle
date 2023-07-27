@@ -129,7 +129,7 @@ ion-icon:hover {
         font-size: 2.3em;
     }
 
-    main img, .test-section {
+    main img, .test-section, header {
         margin-bottom: 0;
     }
 
